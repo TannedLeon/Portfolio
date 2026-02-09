@@ -15,6 +15,10 @@
     --primary-light: hsl(158, 83%, 32%);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: var(--bg-dark);
     height: fit-content;
@@ -41,8 +45,10 @@ body {
 }
 
 #landing nav {
-    height: 68px;
+    height: 64px;
     width: 100%;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: right;
@@ -74,8 +80,8 @@ body {
     width: 44px;
     margin: 0;
 }
-#rubik:hover {transform: scale(1.10);}
-#rubik:active {transform: scale(.90);}
+#rubik:hover { transform: scale(1.10); }
+#rubik:active { transform: scale(.90); }
 
 #headshot-container {
     display: flex;
@@ -83,7 +89,7 @@ body {
     align-items: center;
     justify-content: center;
     width: fit-content;
-    margin: 68px 30px 0px 30px;
+    margin: 76px 30px 12px 30px;
 }
 #headshot{
     width: min(64%, 260px);
@@ -93,7 +99,7 @@ body {
 
 #intro {
     width: fit-content;
-    margin: 0px 30px;
+    margin: 0px 30px 48px 30px;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -101,20 +107,20 @@ body {
     text-align: left;
 }
 #intro div {
-    height: 64px; 
+    height: 56px; 
     display: flex; 
     align-items: center; 
     justify-content: center;
     text-align: center;
 }
 #intro h2 {
-    font-size: 32px;
+    font-size: 28px;
     font-weight: normal;
     width: fit-content;
-    padding: 10px 0px;
     margin: 0;
 }
 #intro h4 {
+    margin-top: 12px;
     margin-bottom: 0px;
     margin-right: auto;
     color: var(--primary-light);
@@ -127,8 +133,8 @@ body {
     border: 2px solid var(--primary);
     border-radius: 10px;
     padding: 12px; 
-    margin-top: 28px;
-    font-size: 14px;
+    margin-top: 24px;
+    font-size: 12px;
     text-decoration: none;
     color: white;
     background-color: var(--primary-light);
@@ -141,6 +147,34 @@ body {
 }
 #intro a:active { transform: scale(.9); }
 
+#arrow-container {
+    position: absolute; 
+    bottom: 4px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 40%;
+}
+#arrow-container p {
+    margin: -4px;
+    font-size: 12px;
+}
+#arrow {
+    width: 28px;
+    height: 20px;
+    animation: bounce 1.5s infinite;
+}
+#arrow-container:hover {
+    opacity: 80%;
+}
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(2px); }
+}
+
 @media (min-width: 800px) {
     #landing {
         flex-direction: row;
@@ -151,30 +185,28 @@ body {
         width: max(28vw, 400px);
     }
     #headshot {
-        width: min(32vw, 300px)
+        width: min(32vw, 300px);
     }
     #intro {
         margin-left: 0;
+        margin-bottom: 0;
         flex-grow: 0;
         width: 36vw;
     }
-
 }
 
 /* ========== WORK EXPERINCE ========== */
-.timeline {
+#timeline {
     position: relative;
     margin: 5vh auto;
     padding-left: 32px;
     width: min(80vw, 500px);
     border-left: 2px solid var(--border);
 }
-
 .timeline-item {
     position: relative;
-    margin-bottom: 2rem;
-    }
-
+    margin-bottom: 32px;
+}
 .timeline-dot {
     position: absolute;
     left: -43px;
@@ -184,7 +216,6 @@ body {
     border: 2px solid var(--primary-dark);
     border-radius: 50%;
 }
-
 .timeline-content {
     background: var(--bg);
     padding: 20px;
@@ -205,4 +236,66 @@ body {
     margin: 10px 0px;
     padding-left: 16px;
     list-style-position:outside;
+}
+
+/* ========== EDUCATION ========== */
+#edu-container {
+    position: relative;
+    margin: 5vh auto;
+    padding-right: 32px;
+    width: min(80vw, 500px);
+    border-right: 2px solid var(--border);
+}
+.edu-item {
+    position: relative;
+    margin-bottom: 32px;
+}
+.edu-dot {
+    position: absolute;
+    right: -43px;
+    width: 16px;
+    height: 16px;
+    background: var(--primary-light);
+    border: 2px solid var(--primary-dark);
+    border-radius: 50%;
+}
+.edu-content {
+    background: var(--bg);
+    padding: 20px;
+    border-radius: 12px;
+}
+.edu-content h3 {
+    margin: 0;
+}
+.edu-content .date {
+    font-size: 12px;
+    color: var(--text-light);
+}
+.edu-content p {
+    margin: 10px 0px;
+    color: var(--text);
+}
+
+/* ========== CONTACT ========== */
+#contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    width: 100%;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    background-color: var(--text-light);
+    color: var(--border);
+}
+#contact-container div {
+    width: fit-content;
+    margin: 0;
+}
+#contact-container div h2, p {
+    margin: 0;
+}
+#contact-container div a {
+    text-decoration:none;
+    color: var(--border)
 }
