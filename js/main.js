@@ -1,3 +1,12 @@
+
+
+const nav = document.querySelector('nav');
+
+window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 0);
+});
+
+
 var TxtType = function(el, toRotate, period) {
         this.toRotate = toRotate;
         this.el = el;
@@ -51,6 +60,6 @@ window.onload = function() {
     // INJECT CSS
     var css = document.createElement("style");
     css.type = "text/css";
-    css.innerHTML = ".typewrite > .wrap { border-right: 2px solid #000; animation: blink 0.7s infinite; } @keyframes blink { 0%, 49% { border-right-color: #000; } 50%, 100% { border-right-color: transparent; } }";
+    css.innerHTML = ".typewrite > .wrap { border-right: 2px solid var(--primary-light); animation: blink 0.7s infinite; } @keyframes blink { 0%, 49% { border-right-color: var(--primary-light); } 50%, 100% { border-right-color: transparent; } }";
     document.body.appendChild(css);
 };
