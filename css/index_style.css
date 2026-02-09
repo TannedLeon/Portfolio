@@ -297,5 +297,5 @@ body {
 }
 #contact-container div a {
     text-decoration:none;
-    color: var(--border)
+    color: var(--border);
 }
