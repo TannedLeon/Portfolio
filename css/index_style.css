@@ -21,14 +21,13 @@ html {
 
 body {
     background: var(--bg-dark);
-    height: fit-content;
-    width: 100vw;
+    width: 100%;
     display: flex;
     margin: 0;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-family: montserrat;
+    font-family: "Montserrat", sans-serif;
     color: var(--text-light);
 }
 
@@ -36,8 +35,8 @@ body {
 #landing {
     background: var(--bg-dark);
     width: 100%;
-    height: 100dvh; /* For mobile devices. Dynamic view height. */
     height: 100vh;
+    height: 100dvh; /* For mobile devices. Dynamic view height. */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -162,7 +161,7 @@ body {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    opacity: 40%;
+    opacity: 0.4;
 }
 #arrow-container p {
     margin: -4px;
@@ -201,7 +200,7 @@ body {
     }
 }
 
-/* ========== WORK EXPERINCE ========== */
+/* ========== WORK EXPERIENCE ========== */
 #timeline {
     position: relative;
     margin: 5vh auto;
@@ -297,7 +296,8 @@ body {
     width: fit-content;
     margin: auto auto auto 8vw;
 }
-#contact-container div h2, p {
+#contact-container div h2, 
+#contact-container div p {
     margin: 0;
     font-weight: normal;
 }
