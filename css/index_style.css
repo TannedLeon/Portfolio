@@ -69,6 +69,11 @@ body {
     color: var(--text-light);
     padding: 0px 12px;
     font-size: 16px;
+    cursor: pointer;
+}
+#landing nav a:hover {
+    text-decoration: underline;
+    color: var(--primary);
 }
 #rubik {
     width: 44px;
@@ -92,7 +97,7 @@ body {
     margin: 76px 30px 12px 30px;
 }
 #headshot{
-    width: min(64%, 260px);
+    width: min(64%, 260px, 30vh);
     border-radius: 50%;
     margin: 0;
 }
@@ -107,34 +112,35 @@ body {
     text-align: left;
 }
 #intro div {
-    height: 56px; 
+    height: min(56px, 8vh); 
     display: flex; 
     align-items: center; 
     justify-content: center;
     text-align: center;
 }
 #intro h2 {
-    font-size: 28px;
+    font-size: min(28px, 4vh);
     font-weight: normal;
     width: fit-content;
     margin: 0;
 }
 #intro h4 {
-    margin-top: 12px;
+    font-size: min(16px, 2.5vh);
+    margin-top: min(12px, 1vh);
     margin-bottom: 0px;
     margin-right: auto;
     color: var(--primary-light);
 }
 #intro p {
+    font-size: min(16px, 2.5vh);
     margin: 0px;
     color: var(--text-light);
 }
 #intro a {
-    border: 2px solid var(--primary);
     border-radius: 10px;
-    padding: 12px; 
-    margin-top: 24px;
-    font-size: 12px;
+    padding: min(12px, 2vh); 
+    margin-top: 16px;
+    font-size: min(12px, 2vh);
     text-decoration: none;
     color: white;
     background-color: var(--primary-light);
@@ -149,7 +155,7 @@ body {
 
 #arrow-container {
     position: absolute; 
-    bottom: 4px;
+    bottom: 2px;
     height: fit-content;
     display: flex;
     flex-direction: column;
@@ -209,11 +215,10 @@ body {
 }
 .timeline-dot {
     position: absolute;
-    left: -43px;
+    left: -41px;
     width: 16px;
     height: 16px;
     background: var(--primary-light);
-    border: 2px solid var(--primary-dark);
     border-radius: 50%;
 }
 .timeline-content {
@@ -252,11 +257,10 @@ body {
 }
 .edu-dot {
     position: absolute;
-    right: -43px;
+    right: -41px;
     width: 16px;
     height: 16px;
     background: var(--primary-light);
-    border: 2px solid var(--primary-dark);
     border-radius: 50%;
 }
 .edu-content {
@@ -279,23 +283,28 @@ body {
 /* ========== CONTACT ========== */
 #contact-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 20vh;
+    height: 28vh;
     width: 100%;
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
     background-color: var(--text-light);
-    color: var(--border);
+    color: white;
 }
 #contact-container div {
     width: fit-content;
-    margin: 0;
+    margin: auto auto auto 8vw;
 }
 #contact-container div h2, p {
     margin: 0;
+    font-weight: normal;
 }
 #contact-container div a {
-    text-decoration:none;
-    color: var(--border);
+    color: hsl(140, 100%, 50%);
+    font-size: 16px;
+}
+#contact-container div a:hover {
+    color: hsl(60, 100%, 50%);
 }
